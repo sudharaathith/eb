@@ -10,13 +10,17 @@
     <script src="https://kit.fontawesome.com/412ebc4070.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+        
         </style> 
+        <script src={% static 'script/plotly-latest.min.js' %}></script>
+        <script src={% static 'script/jquery-3.5.0.js' %}></script>
         
 </head>
-<script src={% static 'script/plotly-latest.min.js' %}></script>
-<p class="domine" hidden>{{domine}}</p>
+
+
+
 <body>
-    
+    <p id="domine" hidden>{{domine}}</p>
     <h1 class="title"> <span class='fas fa-charging-station'></span> EB Manager</h1>
     <nav>
         <span>MEATER:</span>
@@ -25,18 +29,20 @@
         <a onclick="" href="">723</a>
     </nav>
     <div id="myPlot" style="width:100%;max-width:700px"></div>
-    <script src={% static 'script/script.js' %}></script>
+    
     <div class="table-continer">
         <table id="data">
             <tr>
                 <th>Date</th>
                 <th>Unit</th>
-                <th>Ammount</th>
+                <th>Cost</th>
                 <th>Days</th>
-                <th></th>
+                <th>Unit Per Day</th>
+                <th>Cost Per Day</th>
             </tr>
 
         </table>
     </div>
+    <script src={% static 'script/script.js' %}></script>
 </body>
 </html>
